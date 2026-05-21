@@ -1,0 +1,44 @@
+{
+  "name": "agent-vent",
+  "version": "0.1.0",
+  "description": "MCP server that lets coding agents vent frustration about tooling/docs/env friction. Stores locally and surfaces via macOS notification.",
+  "type": "module",
+  "bin": {
+    "agent-vent": "dist/bin/agent-vent.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "node dist/bin/agent-vent.js",
+    "dev": "tsx bin/agent-vent.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "cursor",
+    "vent",
+    "feedback"
+  ],
+  "author": "Pedro Soares",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
